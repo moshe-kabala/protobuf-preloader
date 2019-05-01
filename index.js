@@ -115,7 +115,6 @@ module.exports = function(source) {
       loadDependencies.catch(function(depErr) {
         callback(depErr);
       }).then(function() {
-        console.dir(result)
         callback(err, result);
       });
     });
