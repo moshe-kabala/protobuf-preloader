@@ -32,7 +32,8 @@ const schema = {
 module.exports = function(source) {
   let callback = this.async();
   let self = this;
-  let loaderOptions = loaderUtils.getOptions(this)
+  // When the options is empty create an empty object instend getting null
+  let loaderOptions = getOptions(this) || {};
   const options = Object.assign({
     json: false,
     // Default to the paths given to the compiler (this.options is the
@@ -40,7 +41,7 @@ module.exports = function(source) {
     paths: loaderOptions.paths || [],
 
     pbjsArgs: [],
-  }, getOptions(this));
+  }, loaderOptions);
   validateOptions(schema, options, 'protobufjs-loader');
 
   let filename;
