@@ -17,7 +17,9 @@
   "license": "MIT",
   "dependencies": {
     "protobufjs": "^6.8.0",
-    "tmp-promise": "^1.0.4"
+    "tmp-promise": "^1.0.4",
+    "loader-utils": "^1.2.3",
+    "schema-utils": "^1.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
