@@ -32,7 +32,7 @@ const schema = {
 module.exports = function(source) {
   let callback = this.async();
   let self = this;
-  let loaderOptions = loaderUtils.getOptions(this)
+  let loaderOptions = loaderUtils.getOptions(this) || {};
   const options = Object.assign({
     json: false,
     // Default to the paths given to the compiler (this.options is the
