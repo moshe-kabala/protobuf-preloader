@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const loaderUtils = require("loader-utils");
 const pbjs = require('protobufjs/cli').pbjs;
 const protobuf = require('protobufjs');
 const tmp = require('tmp-promise');
